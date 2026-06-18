@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafariConnect - Wildlife Tours Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HOMEPAGE (Public) ===== -->
+  <div id="homePage">
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo" id="navHomeLink">
+          <i class="fas fa-tree"></i>
+          <span>SafariConnect</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#packages" class="nav-link">Packages</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#accommodations" class="nav-link">Accommodations</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="btn-nav-signin" id="openLoginBtn"><i class="fas fa-user-circle"></i> Sign In</button>
+          <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-subtitle">Discover the Wild</p>
+        <h1 class="hero-title">Experience Africa's<br>Greatest Safari</h1>
+        <p class="hero-text">From the vast plains of the Maasai Mara to the pristine beaches of Diani,<br>embark on the journey of a lifetime with SafariConnect.</p>
+        <div class="hero-buttons">
+          <a href="#packages" class="btn-hero-primary">Explore Packages <i class="fas fa-arrow-right"></i></a>
+          <a href="#destinations" class="btn-hero-secondary">View Destinations</a>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- Destinations -->
+    <section class="section" id="destinations">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Destinations</span>
+          <h2 class="section-title">Explore Iconic Destinations</h2>
+          <p class="section-desc">Discover Kenya's most breathtaking wildlife and scenic locations, each offering a unique safari experience.</p>
+        </div>
+        <div class="destinations-grid">
+          <div class="dest-card" onclick="App.openDestinationByName('Maasai Mara')">
+            <div class="dest-card-img" style="background-image: url('https://images.unsplash.com/photo-1534177616072-ef7dc120449d?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="dest-card-body">
+              <h3>Maasai Mara</h3>
+              <p>Prime safari destination with the Great Migration, Big Five, and vast golden savannahs stretching to the horizon.</p>
+              <div class="dest-card-footer">
+                <span><i class="fas fa-calendar"></i> Jul-Oct peak</span>
+                <span><i class="fas fa-paw"></i> Big Five</span>
+              </div>
+            </div>
+          </div>
+          <div class="dest-card" onclick="App.openDestinationByName('Amboseli')">
+            <div class="dest-card-img" style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="dest-card-body">
+              <h3>Amboseli</h3>
+              <p>Famous for large elephant herds against the backdrop of Mount Kilimanjaro, Africa's highest peak.</p>
+              <div class="dest-card-footer">
+                <span><i class="fas fa-calendar"></i> Jun-Oct dry</span>
+                <span><i class="fas fa-mountain"></i> Kilimanjaro views</span>
+              </div>
+            </div>
+          </div>
+          <div class="dest-card" onclick="App.openDestinationByName('Tsavo')">
+            <div class="dest-card-img" style="background-image: url('https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="dest-card-body">
+              <h3>Tsavo</h3>
+              <p>Known for its vast landscapes, red elephants, and diverse wildlife across Tsavo East and West.</p>
+              <div class="dest-card-footer">
+                <span><i class="fas fa-calendar"></i> Year-round</span>
+                <span><i class="fas fa-water"></i> Mzima Springs</span>
+              </div>
+            </div>
+          </div>
+          <div class="dest-card" onclick="App.openDestinationByName('Diani Beach')">
+            <div class="dest-card-img" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80')"></div>
+            <div class="dest-card-body">
+              <h3>Diani Beach</h3>
+              <p>Beautiful white sandy beaches along the Indian Ocean with palm trees, coral reefs, and luxury resorts.</p>
+              <div class="dest-card-footer">
+                <span><i class="fas fa-calendar"></i> Year-round</span>
+                <span><i class="fas fa-ship"></i> Water sports</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accommodations -->
+    <section class="section" id="accommodationsSection">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Accommodations</span>
+          <h2 class="section-title">Premium Lodging</h2>
+          <p class="section-desc">Hand-picked safari lodges, tented camps, and beach resorts for an unforgettable stay.</p>
+        </div>
+        <div class="accommodations-grid" id="accGrid">
+          <p style="grid-column:1/-1;text-align:center;color:var(--text-light)">Loading accommodations...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="section section-dark" id="packages">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Tour Packages</span>
+          <h2 class="section-title">Curated Safari Experiences</h2>
+          <p class="section-desc">Hand-picked packages designed to give you the ultimate African wildlife adventure.</p>
+        </div>
+        <div class="packages-grid">
+          <div class="pkg-card">
+            <div class="pkg-card-img" style="background-image: url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80')">
+              <span class="pkg-badge">Popular</span>
+            </div>
+            <div class="pkg-card-body">
+              <div class="pkg-duration"><i class="far fa-clock"></i> 3 Days / 2 Nights</div>
+              <h3>3-Day Safari</h3>
+              <p>Maasai Mara, Lake Nakuru. Witness the Great Migration and flamingos.</p>
+              <ul class="pkg-features">
+                <li><i class="fas fa-check"></i> Game drives</li>
+                <li><i class="fas fa-check"></i> Full-board accommodation</li>
+                <li><i class="fas fa-check"></i> Park fees included</li>
+              </ul>
+              <div class="pkg-price">
+                <span class="price">KSh 45,000</span>
+                <span class="price-label">per person</span>
+              </div>
+              <button class="btn-primary btn-book" onclick="App.openBooking()">Book Now</button>
+            </div>
+          </div>
+          <div class="pkg-card pkg-featured">
+            <div class="pkg-card-img" style="background-image: url('https://images.unsplash.com/photo-1564767655658-6e6a0c24a0ac?auto=format&fit=crop&w=800&q=80')">
+              <span class="pkg-badge best">Best Value</span>
+            </div>
+            <div class="pkg-card-body">
+              <div class="pkg-duration"><i class="far fa-clock"></i> 5 Days / 4 Nights</div>
+              <h3>5-Day Adventure</h3>
+              <p>Amboseli, Tsavo, Diani Beach. Elephants, red soil, and coastal paradise.</p>
+              <ul class="pkg-features">
+                <li><i class="fas fa-check"></i> Full-day game drives</li>
+                <li><i class="fas fa-check"></i> Luxury tented camp</li>
+                <li><i class="fas fa-check"></i> Beach relaxation</li>
+                <li><i class="fas fa-check"></i> All transfers included</li>
+              </ul>
+              <div class="pkg-price">
+                <span class="price">KSh 85,000</span>
+                <span class="price-label">per person</span>
+              </div>
+              <button class="btn-primary btn-book" onclick="App.openBooking()">Book Now</button>
+            </div>
+          </div>
+          <div class="pkg-card">
+            <div class="pkg-card-img" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80')">
+              <span class="pkg-badge">Premium</span>
+            </div>
+            <div class="pkg-card-body">
+              <div class="pkg-duration"><i class="far fa-clock"></i> 7 Days / 6 Nights</div>
+              <h3>7-Day Premium</h3>
+              <p>Maasai Mara, Amboseli, Lake Nakuru, Nairobi. The complete Kenyan safari.</p>
+              <ul class="pkg-features">
+                <li><i class="fas fa-check"></i> Private game drives</li>
+                <li><i class="fas fa-check"></i> 5-star lodges</li>
+                <li><i class="fas fa-check"></i> Hot air balloon</li>
+                <li><i class="fas fa-check"></i> Airport transfers</li>
+                <li><i class="fas fa-check"></i> Professional guide</li>
+              </ul>
+              <div class="pkg-price">
+                <span class="price">KSh 150,000</span>
+                <span class="price-label">per person</span>
+              </div>
+              <button class="btn-primary btn-book" onclick="App.openBooking()">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Stats -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="section-title" style="text-align:left">Creating Unforgettable Safari Memories Since 2010</h2>
+            <p>SafariConnect is Kenya's premier wildlife tour operator, dedicated to providing authentic and sustainable safari experiences. Our expert guides, premium vehicles, and hand-picked accommodations ensure every journey is extraordinary.</p>
+            <div class="about-stats">
+              <div class="about-stat">
+                <span class="about-stat-num" data-count="5000">0</span>
+                <span class="about-stat-label">Happy Travelers</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-num" data-count="15">0</span>
+                <span class="about-stat-label">Years Experience</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-num" data-count="98">0</span>
+                <span class="about-stat-label">% Satisfaction</span>
+              </div>
+              <div class="about-stat">
+                <span class="about-stat-num" data-count="12">0</span>
+                <span class="about-stat-label">Awards Won</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=700&q=80" alt="Safari vehicle in the wild">
+            <div class="about-image-card">
+              <i class="fas fa-shield-alt"></i>
+              <div>
+                <strong>Safe & Sustainable</strong>
+                <p>Eco-certified operator</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Platform Guide -->
+    <section class="section blog-section">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Platform Guide</span>
+          <h2 class="section-title">Your All-in-One Safari Management Platform</h2>
+          <p class="section-desc">SafariConnect combines powerful tour operations management with a seamless booking experience — built for tour operators and travelers alike.</p>
+        </div>
+        <div class="blog-grid">
+          <div class="blog-card">
+            <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Operations</span>
+              <h3>Streamlined Tour Operations Dashboard</h3>
+              <p>Manage every aspect of your safari business from a single, intuitive dashboard. SafariConnect gives tour operators complete control over their daily operations without the complexity of traditional enterprise software.</p>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> <strong>Tourist Management</strong> &mdash; Maintain a centralized database of all your travelers with contact details, booking history, and preferences. Add, edit, and search records in seconds.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Package &amp; Inventory</strong> &mdash; Create and manage tour packages with dynamic pricing, durations, and inclusions. Control inventory and track availability across all your offerings.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Vehicle Fleet Tracking</strong> &mdash; Log and monitor your safari vehicles, schedule maintenance, and assign transports to bookings. Keep your fleet road-ready at all times.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Bookings</span>
+              <h3>End-to-End Booking &amp; Reservation System</h3>
+              <p>From inquiry to confirmation, SafariConnect powers the entire booking lifecycle. Travelers can browse destinations and packages, check availability, and submit booking requests online while operators manage everything behind the scenes.</p>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> <strong>Online Booking Portal</strong> &mdash; Public-facing booking forms let travelers submit reservations directly. The system handles package selection, accommodation choices, and real-time price calculation.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Accommodation Integration</strong> &mdash; Connect lodges, camps, and hotels to your bookings. Each accommodation is rated, tracks available rooms, and displays nightly rates for accurate quoting.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Payment &amp; Confirmation</strong> &mdash; Record payments, track balances, and generate booking confirmations. The system automatically calculates totals and maintains a clear audit trail for every transaction.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Destinations</span>
+              <h3>Rich Destination Profiles &amp; Content Management</h3>
+              <p>Bring each destination to life with detailed profiles that showcase everything travelers need to know. SafariConnect's content management system makes it easy to build compelling destination pages that drive bookings.</p>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> <strong>Comprehensive Profiles</strong> &mdash; Each destination gets its own rich page featuring overviews, area size, altitude, best times to visit, key attractions, and available activities — all fully customizable.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Multi-Media Support</strong> &mdash; Upload stunning imagery, display accommodation options, and showcase available tour packages directly on each destination page, creating an immersive browsing experience.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Smart Cross-Linking</strong> &mdash; Automatically surface related packages, nearby accommodations, and applicable activities on every destination page, helping travelers discover everything you offer.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="blog-card">
+            <div class="blog-card-img" style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=800&q=80')"></div>
+            <div class="blog-card-body">
+              <span class="blog-card-tag">Analytics</span>
+              <h3>Data-Driven Insights &amp; Business Intelligence</h3>
+              <p>Make smarter business decisions with SafariConnect's built-in analytics and reporting tools. Track performance, understand your travelers, and identify opportunities to grow your safari operation.</p>
+              <ul>
+                <li><i class="fas fa-check-circle"></i> <strong>Booking Analytics</strong> &mdash; Monitor booking volumes, revenue trends, and package popularity over time. Identify peak seasons and adjust pricing strategies accordingly.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Customer Insights</strong> &mdash; Understand your traveler demographics, source markets, and repeat booking patterns. Build targeted marketing campaigns based on real data.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Operational Reports</strong> &mdash; Generate detailed reports on fleet utilization, accommodation occupancy rates, and package performance. Export data for further analysis whenever you need it.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section-testimonials">
+      <div class="testimonials-bg"></div>
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-tag">Testimonials</span>
+          <h2 class="section-title">What Our Travelers Say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"An absolutely breathtaking experience. The Maasai Mara migration was something I'll never forget. Everything was perfectly organized."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background:#2d6a4f">S</div>
+              <div>
+                <strong>Sarah Johnson</strong>
+                <span>United Kingdom</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>"The 7-day premium package was worth every shilling. Our guide was incredibly knowledgeable and the lodges were world-class."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background:#d4a373">M</div>
+              <div>
+                <strong>Michael Chen</strong>
+                <span>Canada</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>From Amboseli to Diani Beach, every moment was magical. The team took care of everything. I'm already planning my next trip!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" style="background:#1b4332">A</div>
+              <div>
+                <strong>Amara Okafor</strong>
+                <span>Nigeria</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Ready for Your Safari Adventure?</h2>
+          <p>Contact us today and let our experts craft the perfect itinerary for you.</p>
+          <div class="cta-buttons">
+            <a href="tel:+254745767466" class="btn-hero-primary"><i class="fas fa-phone"></i> +254 745 767 466</a>
+            <a href="mailto:info@safariconnect.com" class="btn-hero-secondary"><i class="fas fa-envelope"></i> info@safariconnect.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <i class="fas fa-tree"></i>
+              <span>SafariConnect</span>
+            </div>
+            <p>Kenya's premier wildlife tour management system. Experience the wild like never before.</p>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#destinations">Destinations</a>
+            <a href="#packages">Packages</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Destinations</h4>
+            <a href="#">Maasai Mara</a>
+            <a href="#">Amboseli</a>
+            <a href="#">Tsavo</a>
+            <a href="#">Diani Beach</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+            <p><i class="fas fa-phone"></i> +254 745 767 466</p>
+            <p><i class="fas fa-envelope"></i> info@safariconnect.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 SafariConnect. All rights reserved.</p>
+          <p class="footer-built-by">Built by <strong>DivineLogic Systems</strong></p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ===== DESTINATION DETAIL PAGE (full-page view) ===== -->
+  <div id="destPage" class="dest-page" style="display:none;">
+    <div class="dest-page-hero" id="destPageHero">
+      <div class="dest-page-hero-overlay"></div>
+      <div class="dest-page-hero-content">
+        <button class="dest-page-back" id="destPageBack"><i class="fas fa-arrow-left"></i> Back to Destinations</button>
+        <h1 id="destPageTitle"></h1>
+        <div class="dest-page-hero-info" id="destPageHeroInfo"></div>
+      </div>
+    </div>
+    <div class="dest-page-body" id="destPageBody"></div>
+  </div>
+
+  <!-- ===== BOOKING PAGE ===== -->
+  <div id="bookingPage" class="booking-page-overlay" style="display:none;">
+    <div class="booking-page">
+      <div class="booking-header">
+        <h2>Book Your Safari</h2>
+        <p>Fill in your details and we'll confirm your adventure.</p>
+        <button class="booking-close" id="bookingClose">&times;</button>
+      </div>
+      <div id="bookingFormContainer"></div>
+    </div>
+  </div>
+
+  <!-- ===== BOOKING CONFIRMATION ===== -->
+  <div id="bookingConfirmModal" class="booking-confirm-overlay" style="display:none;">
+    <div class="booking-confirm-modal">
+      <div class="booking-confirm-icon"><i class="fas fa-check-circle"></i></div>
+      <h2>Booking Confirmed!</h2>
+      <div id="bookingConfirmContent"></div>
+      <button class="btn-hero-primary" id="bookingConfirmOk" style="margin-top:24px">Great!</button>
+    </div>
+  </div>
+
+  <!-- ===== LOGIN MODAL ===== -->
+  <div id="loginModal" class="login-modal-overlay" style="display:none;">
+    <div class="login-modal">
+      <div class="login-modal-left">
+        <div class="login-modal-brand">
+          <i class="fas fa-tree"></i>
+          <h2>SafariConnect</h2>
+          <p>Access your management dashboard to oversee tours, bookings, and operations.</p>
+        </div>
+      </div>
+      <div class="login-modal-right">
+        <button class="login-modal-close" id="closeLoginBtn">&times;</button>
+        <div id="loginFormContainer">
+          <h3>Welcome Back</h3>
+          <p class="login-modal-sub">Sign in to your account</p>
+          <form id="loginForm">
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> Username</label>
+              <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-lock"></i> Password</label>
+              <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <p id="loginError" class="error-message"></p>
+            <button type="submit" class="btn-login">Sign In <i class="fas fa-arrow-right"></i></button>
+          </form>
+          <p class="login-modal-footer">Don't have an account? <a href="#" id="showSignupLink">Create one</a></p>
+        </div>
+        <div id="signupFormContainer" style="display:none;">
+          <h3>Create Account</h3>
+          <p class="login-modal-sub">Join SafariConnect</p>
+          <form id="signupForm">
+            <div class="form-group">
+              <label><i class="fas fa-user"></i> Full Name</label>
+              <input type="text" id="signupName" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-envelope"></i> Email</label>
+              <input type="email" id="signupEmail" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-user-tag"></i> Username</label>
+              <input type="text" id="signupUsername" placeholder="Choose a username" required>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-lock"></i> Password</label>
+              <input type="password" id="signupPassword" placeholder="Create a password" required minlength="6">
+            </div>
+            <p id="signupError" class="error-message"></p>
+            <button type="submit" class="btn-login">Create Account <i class="fas fa-user-plus"></i></button>
+          </form>
+          <p class="login-modal-footer">Already have an account? <a href="#" id="showLoginLink">Sign in</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ADMIN APP ===== -->
+  <div id="appPage" class="app-page" style="display:none;">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fas fa-tree"></i>
+          <span>SafariConnect</span>
+        </div>
+        <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-section-title">Main</span>
+          <a href="#" class="nav-item active" data-page="dashboard"><i class="fas fa-chart-pie"></i> Dashboard</a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-section-title">Management</span>
+          <a href="#" class="nav-item" data-page="tourists"><i class="fas fa-users"></i> Tourists</a>
+          <a href="#" class="nav-item" data-page="packages"><i class="fas fa-box"></i> Packages</a>
+          <a href="#" class="nav-item" data-page="bookings"><i class="fas fa-calendar-check"></i> Bookings</a>
+          <a href="#" class="nav-item" data-page="vehicles"><i class="fas fa-truck"></i> Vehicles</a>
+          <a href="#" class="nav-item" data-page="accommodations"><i class="fas fa-hotel"></i> Accommodations</a>
+          <a href="#" class="nav-item" data-page="payments"><i class="fas fa-credit-card"></i> Payments</a>
+          <a href="#" class="nav-item" data-page="destinations"><i class="fas fa-map-marker-alt"></i> Destinations</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <i class="fas fa-user-circle"></i>
+          <span id="userDisplay">Admin</span>
+        </div>
+        <button id="logoutBtn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h2 id="pageTitle">Dashboard</h2>
+        <div class="topbar-actions">
+          <span id="userRole" class="role-badge"></span>
+          <button class="btn-add" id="pageActionBtn" style="display:none;"><i class="fas fa-plus"></i> Add New</button>
+        </div>
+      </header>
+      <div class="content-area" id="contentArea"></div>
+    </main>
+  </div>
+
+  <!-- ===== CRUD MODAL ===== -->
+  <div id="modalOverlay" class="modal-overlay" style="display:none;">
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Modal</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
